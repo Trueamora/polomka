@@ -1,133 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrueAmora — Where Love Meets Trust</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #120b17;
-      color: white;
-      text-align: center;
-      line-height: 1.8;
-    }
+<title>TrueAmora | Where Love Meets Trust</title>
 
-    .hero {
-      min-height: 75vh;
-      background:
-        linear-gradient(to bottom,
-          rgba(18,11,23,0.15),
-          rgba(18,11,23,0.95)),
-        url('broken-hearts.jpg') center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 60px 20px;
-    }
+<meta name="description" content="TrueAmora — a new era of dating where honesty, loyalty, and genuine connections matter. Coming soon.">
 
-    h1 {
-      font-size: clamp(42px, 9vw, 85px);
-      color: #ff6b9a;
-      margin: 0;
-      letter-spacing: 3px;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    h2 {
-      color: #ffb4ce;
-      font-size: 25px;
-    }
+<style>
 
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding: 50px 25px;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    p {
-      font-size: 19px;
-      margin-bottom: 25px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .highlight {
-      color: #ff91b5;
-      font-weight: bold;
-    }
+body {
+  margin: 0;
+  background: #130b12;
+  color: #f9f1ed;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.8;
+}
 
-    .coming {
-      margin-top: 45px;
-      padding: 25px;
-      border: 1px solid #ff6b9a;
-      border-radius: 15px;
-      color: #ffb4ce;
-      font-size: 23px;
-      font-weight: bold;
-    }
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(19,11,18,0.25),
+      rgba(19,11,18,0.65),
+      #130b12
+    ),
+    url('broken-hearts.jpg') center/cover;
 
-    footer {
-      padding: 30px;
-      color: #aaa;
-      font-size: 14px;
-    }
-  </style>
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 22px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 10vw, 100px);
+  font-weight: 600;
+  letter-spacing: 5px;
+  color: #f0cf9b;
+  margin: 0;
+}
+
+.heart {
+  color: #e58ba5;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e8c99c;
+  margin-top: 15px;
+}
+
+.hero h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(35px, 6vw, 65px);
+  font-weight: 500;
+  line-height: 1.15;
+  max-width: 850px;
+  margin: 45px auto 20px;
+}
+
+.hero-description {
+  color: #e6c5cb;
+  font-size: 19px;
+  max-width: 600px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 16px 35px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #e9c58e, #c79555);
+  color: #211018;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(233,197,142,0.2);
+}
+
+.section {
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.container {
+  max-width: 760px;
+  margin: auto;
+}
+
+.section-label {
+  color: #d5ac76;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 20px 0 35px;
+}
+
+p {
+  font-size: 18px;
+  color: #d7c7ce;
+  margin: 0 auto 25px;
+}
+
+.emphasis {
+  color: #f0cf9b;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 40px auto;
+}
+
+.divider {
+  width: 70px;
+  height: 1px;
+  background: #c69a67;
+  margin: 45px auto;
+}
+
+.story {
+  background: #1b101a;
+}
+
+.trust {
+  background:
+    radial-gradient(
+      ellipse at center,
+      #38202c,
+      #130b12 75%
+    );
+}
+
+.trust-card {
+  max-width: 760px;
+  margin: 45px auto;
+  padding: 55px 35px;
+  border: 1px solid rgba(233,197,142,0.35);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.025);
+}
+
+.trust-icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.promise {
+  color: #f0cf9b;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  line-height: 1.3;
+}
+
+.values {
+  background: #1b101a;
+}
+
+.values-line {
+  color: #e9c58e;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 35px auto;
+}
+
+.final {
+  background:
+    radial-gradient(
+      ellipse at top,
+      #40202e,
+      #130b12 75%
+    );
+  padding: 120px 24px;
+}
+
+.final h2 {
+  color: #f0cf9b;
+}
+
+.coming {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 18px 35px;
+  border: 1px solid #c69a67;
+  border-radius: 50px;
+  color: #e9c58e;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+footer {
+  background: #0e080d;
+  text-align: center;
+  padding: 35px 20px;
+  color: #8e7b84;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .logo {
+    letter-spacing: 2px;
+  }
+
+  .section {
+    padding: 75px 22px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  .trust-card {
+    padding: 40px 23px;
+  }
+
+  .values-line {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
-  <h1>❤️ TRUEAMORA</h1>
-  <h2>Something Beautiful Is Coming...</h2>
+
+  <div class="heart">♥</div>
+
+  <h1 class="logo">TRUEAMORA</h1>
+
+  <div class="subtitle">
+    Something Beautiful Is Coming
+  </div>
+
+  <h2>
+    Because Every Honest Heart
+    Deserves True Love.
+  </h2>
+
+  <p class="hero-description">
+    A new beginning for those who still
+    believe in honesty, loyalty,
+    and the beauty of true love.
+  </p>
+
+  <a href="#story" class="button">
+    Discover TrueAmora
+  </a>
+
 </section>
 
-❤️ TRUEAMORA
 
-Something Beautiful Is Coming…
+<!-- STORY -->
 
-Because Every Honest Heart Deserves True Love.
+<section class="section story" id="story">
 
-You’ve been hurt. You’ve trusted. You’ve believed in promises that were broken.
+  <div class="container">
 
-But what if this time could be different?
+    <div class="section-label">
+      A New Beginning
+    </div>
 
-What if you could meet someone who doesn’t just promise loyalty, honesty, and commitment — but is willing to take an extraordinary step to demonstrate them?
+    <h2>
+      What If This Time
+      Could Be Different?
+    </h2>
 
-❤️ Welcome to a New Era of Dating.
+    <p>
+      You've been hurt.
+      You've trusted.
+      You've believed in promises
+      that were broken.
+    </p>
 
-We are creating a unique place where broken hearts can heal, lost trust can be rebuilt, and shattered dreams can find a new beginning.
+    <div class="divider"></div>
 
-A place for people who still believe in loyalty, honesty, commitment, and the beauty of family.
+    <p class="emphasis">
+      But what if this time
+      could be different?
+    </p>
 
-Here, honesty isn’t just a promise. It’s a commitment.
+    <p>
+      What if you could meet someone
+      who doesn't just promise loyalty,
+      honesty, and commitment —
+      but is willing to take an
+      extraordinary step to demonstrate them?
+    </p>
 
-At TrueAmora, we’re introducing a new level of transparency in dating — where members can voluntarily undergo independent polygraph screening about their past relationships.
+  </div>
 
-Not because love should be an interrogation, but because trust deserves more than beautiful words.
+</section>
 
-A place where you won’t have to compromise your values or settle for less than you deserve.
 
-Because true love should never require you to sacrifice who you are.
+<!-- NEW ERA -->
 
-✨ Real People. Honest Intentions. Genuine Connections.
+<section class="section">
 
-Your past doesn’t define your future.
+  <div class="container">
 
-And somewhere out there, someone may be looking for exactly the kind of love you have to offer.
+    <div class="section-label">
+      Welcome to TrueAmora
+    </div>
 
-❤️ Your True Love May Still Be Waiting.
+    <h2>
+      Welcome to a New Era of Dating.
+    </h2>
 
-⸻
+    <p>
+      We are creating a unique place
+      where broken hearts can heal,
+      lost trust can be rebuilt,
+      and shattered dreams can find
+      a new beginning.
+    </p>
 
-🔐 Don’t Just Promise Honesty. Be Willing to Demonstrate It.
+    <p>
+      A place for people who still
+      believe in loyalty, honesty,
+      commitment, and the beauty of family.
+    </p>
 
-❤️ BE AMONG THE FIRST TO FIND TRUE LOVE
+    <p class="emphasis">
+      Here, honesty isn't just a promise.
+      It's a commitment.
+    </p>
 
-Join our exclusive early-access list
+  </div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section class="section trust">
+
+  <div class="container">
+
+    <div class="section-label">
+      A Different Approach to Dating
+    </div>
+
+    <h2>
+      Trust Is More Than a Promise.
+    </h2>
+
+    <div class="trust-card">
+
+      <div class="trust-icon">🔐</div>
+
+      <div class="promise">
+        Don't Just Promise Honesty.
+        Be Willing to Demonstrate It.
+      </div>
+
+      <div class="divider"></div>
+
+      <p>
+        At TrueAmora, we're introducing
+        a new level of transparency in dating —
+        where members can voluntarily undergo
+        independent polygraph screening
+        about their past relationships.
+      </p>
+
+      <p>
+        Not because love should be
+        an interrogation,
+        but because trust deserves
+        more than beautiful words.
+      </p>
+
+      <p style="font-size:13px; opacity:0.7;">
+        Polygraph screening has limitations
+        and cannot guarantee truthfulness
+        or fidelity.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VALUES -->
+
+<section class="section values">
+
+  <div class="container">
+
+    <div class="section-label">
+      What We Believe
+    </div>
+
+    <h2>
+      Love Without Compromise.
+    </h2>
+
+    <p>
+      A place where you won't have
+      to compromise your values
+      or settle for less than you deserve.
+    </p>
+
+    <p class="emphasis">
+      Because true love should never
+      require you to sacrifice who you are.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="values-line">
+      ✨ Real People. Honest Intentions.
+      Genuine Connections.
+    </div>
+
+    <p>
+      Your past doesn't define your future.
+    </p>
+
+    <p>
+      And somewhere out there,
+      someone may be looking for exactly
+      the kind of love you have to offer.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="section final">
+
+  <div class="container">
+
+    <div class="heart">♥</div>
+
+    <div class="section-label">
+      Your Next Chapter Begins Here
+    </div>
+
+    <h2>
+      Your True Love
+      May Still Be Waiting.
+    </h2>
+
+    <p>
+      Be among the first to discover
+      a new way to build meaningful
+      connections.
+    </p>
+
+    <p class="emphasis">
+      Don't give up on love.
+      Believe in a better beginning.
+    </p>
+
+    <div class="coming">
+      COMING SOON
+    </div>
+
+    <h2 style="font-size:32px; margin-top:45px;">
+      Where Love Meets Trust.
+    </h2>
+
+  </div>
+
+</section>
+
 
 <footer>
-  © 2026 TrueAmora.com — All Rights Reserved.
+  © 2026 TrueAmora — All Rights Reserved.
 </footer>
 
 </body>
